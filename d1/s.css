@@ -2,3 +2,12 @@ body
 {
     background-color: aliceblue;
 }
+table
+{
+    background-color: rgb(199, 170, 225);
+    border-radius: 10px;
+    border-color: rgb(39, 39, 104);
+    border-style: groove;
+    border-width: 10px;
+    color: beige;
+}
