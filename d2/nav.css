@@ -1,0 +1,212 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container holds everything */
+#mydiv {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Section (Thinner Navbar) */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust the padding to suit the navbar height */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px; /* Thinner height */
+}
+
+.logo img {
+    height: 40px; /* Fit within the navbar height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Menu Styling */
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu .nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px; /* Smaller font size */
+    padding: 5px 10px; /* Reduced padding */
+    transition: color 0.3s ease;
+}
+
+.menu .nav-item a:hover {
+    color: #007bff;
+}
+
+/* Right section (Login & Signup) */
+.nav-right {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 15px; /* Reduced padding for smaller buttons */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-right a.login {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.nav-right a.signup {
+    background-color: #007bff;
+    color: white;
+}
+
+.nav-right a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Main Content Section */
+#maincontent {
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Ensures footer stays at the bottom */
+}
+
+.success h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.success p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Carousel Styling */
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.carousel .content {
+    flex-basis: 60%;
+}
+
+.carousel .text-line {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.carousel .owner-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carousel .paytm {
+    display: flex;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.pay {
+    color: #007bff;
+}
+
+.tm {
+    color: #333;
+}
+
+/* Carousel Image */
+.carousel .image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section (Stick to Bottom) */
+#footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+#footer .item1, 
+#footer .item2, 
+#footer .item3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+    }
+
+    .carousel {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carousel .content {
+        margin-bottom: 20px;
+    }
+
+    .carousel .image img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #maincontent {
+        padding: 20px;
+    }
+}
